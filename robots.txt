@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://watchpick.fr/sitemap.xml
+
+# Prevent indexing of search results and user-specific pages
+Disallow: /search?*
+Disallow: /user/
+Disallow: /compte
+
+# Allow crawling of media pages
+Allow: /movie/*
+Allow: /tv/*
+Allow: /ai-search

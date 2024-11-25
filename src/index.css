@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg hover:shadow-indigo-500/25;
+  }
+
+  /* Animation du ruban de texte */
+  .ticker-container {
+    @apply relative overflow-hidden mx-auto;
+    height: 3rem;
+    max-width: 100%;
+    background: transparent !important;
+  }
+
+  .ticker-text {
+    @apply absolute whitespace-nowrap;
+    color: #FFE81F !important;
+    text-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+    font-weight: 600;
+    animation: ticker 30s linear infinite;
+    text-align: center;
+    width: 100%;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
